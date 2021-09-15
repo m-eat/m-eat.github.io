@@ -1,1 +1,133 @@
-Hello World
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="title" content="Nurrish Pet Food">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="title">
+            <h1>Nurrish</h1>
+            <p class="sub-heading">Supersnacks for Pets</p>
+        </div>
+        <div class="main-grid">
+            <div class="image-container">
+                <img id="max" src="assets/Max_Ruci_photos.jpg">
+            </div>
+            <div class="copy-container">
+                <h2>Boost Your Pooch!</h2>
+                <p class="survey_descr">If you have sample treats and wish to fill out your survey then please click below</p>
+                <a id="survey-link" href="https://docs.google.com/forms/d/e/1FAIpQLScs4yRkT-Sfl7UY7SQIXZ0WdGPzPUcI6KZKeYQ9ej6X9Mbr_g/viewform">Survey</a>
+                <p>Air dried natural treats for dogs <br> Made from pure, grass-fed premium beef</p>
+            </div>
+        </div>
+    </body>
+</html>
+
+<style>
+    @font-face {
+        font-family: "brandon_reg";
+        src: url("assets/Brandon_reg.otf");
+    }
+
+    @font-face {
+        font-family: "serif";
+        src: url("assets/Serif-Regular.ttf");
+    }
+
+    body{
+        font-family: "serif";
+        font-size: 18px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .title{
+        text-align: center;
+        margin-top:25px;
+    }
+
+    h1{
+        font-family: "brandon_reg";
+        font-size: 3em;
+        line-height: 0;
+        color: #595959;
+    }
+
+    h2{
+        font-family: "brandon_reg";
+        font-size: 2.4em;
+        line-height: 1em;
+    }
+
+    .sub-heading{
+        font-family: "brandon_reg";
+        font-size: 1.2em;
+        color: #595959;
+    }
+
+    .main-grid{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .image-container{
+        display: flex;
+    }
+    .copy-container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background-color: #FBD974;
+    }
+
+    #max{
+        width:100%;
+        object-fit: cover;
+        max-height: 1000px;
+    }
+
+    #survey-link{
+        padding: 7px 20px 13px 20px;
+        color: #ffffff;
+        background-color: rgb(121, 70, 22);
+        font-family: "brandon_reg";
+        font-size: 2em;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 13px;
+        margin-top:25px;
+        margin-bottom: 25px;
+    }
+ 
+    @media (min-width: 549px){
+        .copy-container{
+            flex: 0 0 54%;
+            padding: 30px 20px 20px;
+        }
+        .image-container{
+            flex: 0 0 36%;
+        }
+        h2{
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    @media (max-width: 549px){
+        .copy-container{
+            flex: 100%;
+            padding: 0 20px 20px 20px;
+        }
+        .image-container{
+            flex: 0 0 100%;
+        }
+        h2{
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+</style>
